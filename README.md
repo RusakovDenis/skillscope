@@ -1,2 +1,1 @@
 # BENFIT
-# Landing page
