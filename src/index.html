@@ -129,7 +129,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="about-us">
+	<section class="about-us" id="about-us">
 		<div class="wrap">
 			<h2 class="subtitle text-big">О нас</h2>
 			<div class="about-us__content">
@@ -145,6 +145,16 @@
 						анализа, долгих коммуникаций и обменов документацией – все в рамках одного окна.</p>
 				</div>
 			</div>
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+		<img class="block" src="img/block-1.jpg" alt="">
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+		<img class="block" src="img/block-2.jpg" alt="">
 		</div>
 	</section>
 	<section class="product">
@@ -170,7 +180,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="work">
+	<section class="work" id="work">
 		<div class="wrap">
 			<h2 class="subtitle text-big"><span>Как это работает</h2>
 			<div class="tabs">
@@ -231,11 +241,11 @@
 						</div>
 						<div class="advantages__item">
 							<img class="advantages__img" src="img/work/advantages/item-2.png" alt="">
-							<p class="advantages__paragraph">Возможность коммуникации с ЛПР напрямую.</p>
+							<p class="advantages__paragraph">Больше не нужно тратить время на поиск и анализ предложений, ждать ответа и КП неделями.</p>
 						</div>
 						<div class="advantages__item">
 							<img class="advantages__img" src="img/work/advantages/item-3.png" alt="">
-							<p class="advantages__paragraph">Возможность проведения «Безопасной сделки».</p>
+							<p class="advantages__paragraph">Больше не нужно собирать от контрагентов учредительные документы и отправлять им свои – обмен происходит автоматически.</p>
 						</div>
 					</div>
 				</div>
@@ -243,17 +253,17 @@
 			<div class="clients tabs__section" id="tab2" aria-labelledby="tab2" tabindex="-1" role="tabpanel" hidden>
 				<div class="clients__preview">
 					<div class="clients__line">
-						<img class="clients__img" src="img/" alt="">
+						<img class="clients__img" src="img/clients/line/item-1.png" alt="">
 						<p class="clients__paragraph">Регистрируйтесь, указывайте направление бизнеса и получайте доступ к самой
 							широкой базе клиентов.</p>
 					</div>
 					<div class="clients__line">
-						<img class="clients__img" src="img/" alt="">
 						<p class="clients__paragraph">Разместите свое предложение по каждому из направлений бизнеса и получайте
 							бесплатные заявки от клиентов, ищущих ваши услуги или товары.</p>
+						<img class="clients__img" src="img/clients/line/item-2.png" alt="">
 					</div>
 					<div class="clients__line">
-						<img class="clients__img" src="img/" alt="">
+						<img class="clients__img" src="img/clients/line/item-3.png" alt="">
 						<p class="clients__paragraph">Отвечайте по уже размещенным по вашей специализации заявкам – мы отправим
 							Вам уведомление при появлении заданий от клиентов.</p>
 					</div>
@@ -310,17 +320,18 @@
 			<h2 class="subtitle subtitle--center text-big">Регистрация</h2>
 			<p class="reg__paragraph">Регистрация и работа на платформе<br>абсолютно беслатны.</p>
 			<div class="reg__content">
+				<img class="reg__img" src="img/reg.png" alt="">
 				<form class="reg__form" action="">
 					<input class="reg__input" type="text" placeholder="Имя">
 					<select class="reg__select">
-						<option class="reg__option" disabled>Выбор</option>
+						<option class="reg__option">Выбор</option>
 						<option class="reg__option"></option>
 					</select>
-					<input class="reg__input" type="search">
+					<input class="reg__input" type="text">
 					<input class="reg__input" type="text" placeholder="Должность">
 					<input class="reg__input" type="text" placeholder="ИНН">
 					<input class="reg__input" type="text" placeholder="Наименование организации">
-					<p class="reg__message">Нажимая на кнопку «Регистрация» Вы<br>соглашаетесь с <a href="">политикой
+					<p class="reg__message">Нажимая на кнопку «Регистрация» Вы<br>соглашаетесь с <a class="reg__link" href="" target="_blank">политикой
 							конфиденциальности</a></p>
 					<button class="reg__btn" type="submit">Регистрация</button>
 				</form>
@@ -331,24 +342,8 @@
 		<div class="request__content">
 			<button class="request__btn--close btn--close" aria-label="Закрыть модальное окно"><span
 					class="cross"></span></button>
-			<h4 class="request__title">Оставьте заявку</h4>
 			<form class="request__form" method="post" action="/request.php">
-				<label class="request__label" for="request__name">Имя</label>
-				<input class="request__input" autofocus id="request__name" type="text" name="request__name" required>
-				<label class="request__label" for="request__phone">Телефон</label>
-				<div class="request__field">
-					<span class="request__code">+7</span>
-					<input class="request__input request__phone" id="request__phone" type="tel" name="request__phone"
-						placeholder="(___) ___-__-__" required minlength="10">
-				</div>
-				<label class="request__label" for="request__email">E-mail</label>
-				<input class="request__input" id="request__email" type="email" name="request__email" required>
-				<label class="custom-checkbox" for="request__checkbox">
-					<input class="custom-checkbox__input" id="request__checkbox" type="checkbox" required>
-					<span class="custom-checkbox__icon"></span>
-					<span class="custom-checkbox__text">Даю согласие на обработку персональных данных</span>
-				</label>
-				<button class="request__btn btn" type="submit">Отправить</button>
+
 			</form>
 		</div>
 	</div>
