@@ -110,10 +110,10 @@
 				<nav class="nav">
 					<ul class="nav__list">
 						<li class="nav__list-item">
-							<a class="nav__link" href="">О нас</a>
+							<a class="nav__link" href="#about-us">О нас</a>
 						</li>
 						<li class="nav__list-item">
-							<a class="nav__link" href="">Как это работает</a>
+							<a class="nav__link" href="#work">Как это работает</a>
 						</li>
 					</ul>
 				</nav>
@@ -130,31 +130,27 @@
 		</div>
 	</section>
 	<section class="about-us" id="about-us">
-		<div class="wrap">
-			<h2 class="subtitle text-big">О нас</h2>
-			<div class="about-us__content">
-				<img class="about-us__img" src="img/about-us-info.png" alt="">
-				<div class="about-us__info">
-					<p class="about-us__paragraph"><span class="text-bold">SkillScope</span> — представляет собой уникальный
-						сервис B2B решений для компаний
-						МСП и ИП, объединяя проверенных поставщиков и
-						потребителей товаров, услуг и сервисов.</p>
-					<p class="about-us__paragraph">С помощью <span class="text-bold">SkillScope</span> можно найти любого
-						контрагента для компании максимально
-						быстро – без необходимости самостоятельного поиска и
-						анализа, долгих коммуникаций и обменов документацией – все в рамках одного окна.</p>
+		<div class="about-us__bg">
+			<div class="wrap">
+				<h2 class="subtitle text-big">О нас</h2>
+				<div class="about-us__content">
+					<img class="about-us__img" src="img/about-us-info.png" alt="">
+					<div class="about-us__info">
+						<p class="about-us__paragraph"><span class="text-bold">SkillScope</span> — представляет собой уникальный
+							сервис B2B решений для компаний
+							МСП и ИП, объединяя проверенных поставщиков и
+							потребителей товаров, услуг и сервисов.</p>
+						<p class="about-us__paragraph">С помощью <span class="text-bold">SkillScope</span> можно найти любого
+							контрагента для компании максимально
+							быстро – без необходимости самостоятельного поиска и
+							анализа, долгих коммуникаций и обменов документацией – все в рамках одного окна.</p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<section>
 		<div class="wrap">
-		<img class="block" src="img/block-1.jpg" alt="">
-		</div>
-	</section>
-	<section>
-		<div class="wrap">
-		<img class="block" src="img/block-2.jpg" alt="">
+			<img class="block" src="img/block-1.jpg" alt="">
+			<img class="block" src="img/block-2.jpg" alt="">
 		</div>
 	</section>
 	<section class="product">
@@ -182,18 +178,20 @@
 	</section>
 	<section class="work" id="work">
 		<div class="wrap">
-			<h2 class="subtitle text-big"><span>Как это работает</h2>
-			<div class="tabs">
-				<ul class="tabs__list" role="tablist">
-					<li class="tabs__item" role="presentation">
-						<a class="tabs__link tabs__link--green tabs__link--active tabs__work" href="#tab1" role="tab"
-							aria-selected="true">Для поиска<br>контрагентов</a>
-					</li>
-					<li class="tabs__item" role="presentation">
-						<a class="tabs__link tabs__link--blue tabs__clients" href="#tab2" role="tab" tabindex="-1">Для поиска<br>
-							клиентов</a>
-					</li>
-				</ul>
+			<div class="work__header">
+				<h2 class="subtitle text-big work__title"><span>Как это работает</h2>
+				<div class="tabs">
+					<ul class="tabs__list" role="tablist">
+						<li class="tabs__item" role="presentation">
+							<a class="tabs__link tabs__link--green tabs__link--active tabs__work" href="#tab1" role="tab"
+								aria-selected="true">Для поиска<br>контрагентов</a>
+						</li>
+						<li class="tabs__item" role="presentation">
+							<a class="tabs__link tabs__link--blue tabs__clients" href="#tab2" role="tab" tabindex="-1">Для поиска<br>
+								клиентов</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="work tabs__section" id="tab1" aria-labelledby="tab1" tabindex="-1" role="tabpanel">
 				<div class="work__preview">
@@ -239,13 +237,15 @@
 							<p class="advantages__paragraph">Есть возможность выбрать лучшее предложение в сжатые сроки и сэкономить
 							</p>
 						</div>
-						<div class="advantages__item">
+						<div class="advantages__item margin-horizontal">
 							<img class="advantages__img" src="img/work/advantages/item-2.png" alt="">
-							<p class="advantages__paragraph">Больше не нужно тратить время на поиск и анализ предложений, ждать ответа и КП неделями.</p>
+							<p class="advantages__paragraph">Больше не нужно тратить время на поиск и анализ предложений, ждать ответа
+								и КП неделями.</p>
 						</div>
 						<div class="advantages__item">
 							<img class="advantages__img" src="img/work/advantages/item-3.png" alt="">
-							<p class="advantages__paragraph">Больше не нужно собирать от контрагентов учредительные документы и отправлять им свои – обмен происходит автоматически.</p>
+							<p class="advantages__paragraph">Больше не нужно собирать от контрагентов учредительные документы и
+								отправлять им свои – обмен происходит автоматически.</p>
 						</div>
 					</div>
 				</div>
@@ -257,7 +257,7 @@
 						<p class="clients__paragraph">Регистрируйтесь, указывайте направление бизнеса и получайте доступ к самой
 							широкой базе клиентов.</p>
 					</div>
-					<div class="clients__line">
+					<div class="clients__line clients__line--right">
 						<p class="clients__paragraph">Разместите свое предложение по каждому из направлений бизнеса и получайте
 							бесплатные заявки от клиентов, ищущих ваши услуги или товары.</p>
 						<img class="clients__img" src="img/clients/line/item-2.png" alt="">
@@ -279,40 +279,41 @@
 						<p class="clients__paragraph">Отзывы о клиентах от поставщиков товаров и услуг на основании уже
 							заключенных сделок.</p>
 					</div>
-					<div class="advantages">
-						<h3 class="advantages__title">Преимущества:</h3>
-						<div class="advantages__content">
-							<div class="advantages__item">
-								<img class="advantages__img" src="img/clients/advantages/item-1.png" alt="">
-								<p class="advantages__paragraph">Возможность просмотра и анализа ваших конкурентов.</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__img" src="img/clients/advantages/item-2.png" alt="">
-								<p class="advantages__paragraph">Возможность коммуникации с ЛПР напрямую.</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__img" src="img/clients/advantages/item-3.png" alt="">
-								<p class="advantages__paragraph">Возможность проведения «Безопасной сделки».</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__img" src="img/clients/advantages/item-4.png" alt="">
-								<p class="advantages__paragraph">Максимально быстрый и эффективный способ расширения клиентской
-									базы.</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__img" src="img/clients/advantages/item-5.png" alt="">
-								<p class="advantages__paragraph">Единый канал продаж с возможностью управления заказами в режиме
-									реального времени.</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__img" src="img/clients/advantages/item-6.png" alt="">
-								<p class="advantages__paragraph">Больше не нужно собирать от клиентов учредительные документы и
-									отправлять им свои – обмен происходит автоматически.</p>
-							</div>
+				</div>
+				<div class="advantages">
+					<h3 class="advantages__title">Преимущества:</h3>
+					<div class="advantages__content">
+						<div class="advantages__item">
+							<img class="advantages__img" src="img/clients/advantages/item-1.png" alt="">
+							<p class="advantages__paragraph">Возможность просмотра и анализа ваших конкурентов.</p>
+						</div>
+						<div class="advantages__item margin-horizontal">
+							<img class="advantages__img" src="img/clients/advantages/item-2.png" alt="">
+							<p class="advantages__paragraph">Возможность коммуникации с ЛПР напрямую.</p>
+						</div>
+						<div class="advantages__item">
+							<img class="advantages__img" src="img/clients/advantages/item-3.png" alt="">
+							<p class="advantages__paragraph">Возможность проведения «Безопасной сделки».</p>
+						</div>
+						<div class="advantages__item">
+							<img class="advantages__img" src="img/clients/advantages/item-4.png" alt="">
+							<p class="advantages__paragraph">Максимально быстрый и эффективный способ расширения клиентской
+								базы.</p>
+						</div>
+						<div class="advantages__item margin-horizontal">
+							<img class="advantages__img" src="img/clients/advantages/item-5.png" alt="">
+							<p class="advantages__paragraph">Единый канал продаж с возможностью управления заказами в режиме
+								реального времени.</p>
+						</div>
+						<div class="advantages__item">
+							<img class="advantages__img" src="img/clients/advantages/item-6.png" alt="">
+							<p class="advantages__paragraph">Больше не нужно собирать от клиентов учредительные документы и
+								отправлять им свои – обмен происходит автоматически.</p>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</section>
 	<section class="reg">
@@ -331,7 +332,8 @@
 					<input class="reg__input" type="text" placeholder="Должность">
 					<input class="reg__input" type="text" placeholder="ИНН">
 					<input class="reg__input" type="text" placeholder="Наименование организации">
-					<p class="reg__message">Нажимая на кнопку «Регистрация» Вы<br>соглашаетесь с <a class="reg__link" href="" target="_blank">политикой
+					<p class="reg__message">Нажимая на кнопку «Регистрация» Вы<br>соглашаетесь с <a class="reg__link" href=""
+							target="_blank">политикой
 							конфиденциальности</a></p>
 					<button class="reg__btn" type="submit">Регистрация</button>
 				</form>
@@ -342,19 +344,20 @@
 		<div class="modal__content">
 			<button class="modal__btn--close btn--close" aria-label="Закрыть модальное окно"><span
 					class="cross"></span></button>
-			<form class="modal__form" method="post" action="/request.php">
-					<input class="modal__input" type="text" placeholder="Имя">
-					<select class="modal__select">
-						<option class="modal__option">Выбор</option>
-						<option class="modal__option"></option>
-					</select>
-					<input class="modal__input" type="text" placeholder="Поиск">
-					<input class="modal__input" type="text" placeholder="Должность">
-					<input class="modal__input" type="text" placeholder="ИНН">
-					<input class="modal__input" type="text" placeholder="Наименование организации">
-					<p class="modal__message">Нажимая на кнопку «Регистрация» Вы<br>соглашаетесь с <a class="reg__link" href="" target="_blank">политикой
+			<form class="modal__form" method="post" action="">
+				<input class="modal__input" type="text" placeholder="Имя">
+				<select class="modal__select">
+					<option class="modal__option">Выбор</option>
+					<option class="modal__option"></option>
+				</select>
+				<input class="modal__input" type="text" placeholder="Поиск">
+				<input class="modal__input" type="text" placeholder="Должность">
+				<input class="modal__input" type="text" placeholder="ИНН">
+				<input class="modal__input" type="text" placeholder="Наименование организации">
+				<p class="modal__message">Нажимая на кнопку «Регистрация» Вы<br>соглашаетесь с <a class="reg__link" href=""
+						target="_blank">политикой
 						конфиденциальности</a></p>
-					<button class="modal__btn" type="submit">Регистрация</button>
+				<button class="modal__btn" type="submit">Регистрация</button>
 			</form>
 		</div>
 	</div>

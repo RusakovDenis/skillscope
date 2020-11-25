@@ -39,6 +39,23 @@ if (window.matchMedia("(max-width: 991px)").matches) {
 	});
 }
 
+// Nav
+let navLinks = document.querySelectorAll(".nav__link");
+
+const addActiveClass = () => {
+	let fromTop = window.scrollY + 80;
+
+	navLinks.forEach(navLink => {
+		let section = document.querySelector(navLink.hash);
+
+		if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+			navLink.classList.add("nav__link--active");
+		} else {
+			navLink.classList.remove("nav__link--active");
+		}
+	});
+}
+
 // Btn top
 const btnTop = document.querySelector(".btn-top");
 let interval = 0;
@@ -71,13 +88,14 @@ const btnTopShow = () => {
 window.onscroll = () => {
 	headerFixed();
 	btnTopShow();
+	addActiveClass();
 }
 
 // Request
-const request = document.querySelector(".request");
-const requestBtnClose = document.querySelector(".request__btn--close");
+const request = document.querySelector(".modal");
+const requestBtnClose = document.querySelector(".modal__btn--close");
 
-const btnOpenRequestAll = document.querySelectorAll(".btn--open-request");
+const btnOpenRequestAll = document.querySelectorAll(".btn--open-modal");
 
 btnOpenRequestAll.forEach((btnOpenRequest) => {
 	btnOpenRequest.addEventListener("click", () => {
@@ -87,11 +105,11 @@ btnOpenRequestAll.forEach((btnOpenRequest) => {
 			btnOpenRequest.classList.remove("btn--active");
 		}, 200);
 
-		request.classList.add("request--open");
+		request.classList.add("modal--open");
 		document.body.classList.add("scroll--hidden");
 
 		setTimeout(function () {
-			document.querySelector("#request__name").focus();
+			document.querySelector("#modal__name").focus();
 		}, 500);
 	});
 });
@@ -121,6 +139,7 @@ const tabsLink = tabsList.querySelectorAll("a");
 const tabsContents = document.querySelectorAll("[id^='tab']");
 
 const switchTab = (prevTab, nextTab) => {
+	prevTab.classList.toggle("tabs__link--active");
 	prevTab.removeAttribute("aria-selected");
 	prevTab.setAttribute("tabindex", "-1");
 
@@ -130,6 +149,7 @@ const switchTab = (prevTab, nextTab) => {
 	nextTab.focus();
 	nextTab.removeAttribute("tabindex");
 	nextTab.setAttribute("aria-selected", "true");
+	nextTab.classList.toggle("tabs__link--active");
 
 	let nextIndex = Array.prototype.indexOf.call(tabsLink, nextTab);
 	tabsContents[nextIndex].hidden = false;
@@ -157,3 +177,15 @@ Array.prototype.forEach.call(tabsLink, (tabLink, i) => {
 		}
 	});
 });
+
+document.querySelectorAll("a[href^='#']").forEach(link => {
+	link.addEventListener("click", function (e) {
+		e.preventDefault();
+
+		document.body.style.removeProperty("overflow-y");
+		document.querySelector(this.hash).scrollIntoView({
+			behavior: "smooth"
+		});
+	});
+});
+
