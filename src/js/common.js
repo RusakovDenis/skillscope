@@ -113,9 +113,9 @@ btnOpenRequestAll.forEach((btnOpenRequest) => {
 		request.classList.add("modal--open");
 		document.body.classList.add("scroll--hidden");
 
-		setTimeout(function () {
-			document.querySelector("#modal__name").focus();
-		}, 500);
+		// setTimeout(function () {
+		// 	document.querySelector("#modal__name").focus();
+		// }, 500);
 	});
 });
 
