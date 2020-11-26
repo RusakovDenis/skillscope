@@ -80,10 +80,10 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-around;
     width: 100%;
     margin: 0;
-    padding: 25px 0;
+    padding: 40px 0;
     transition: var(--durationAnimation, 0.4s);
     box-sizing: border-box;
-    backdrop-filter: blur(29px);
+    backdrop-filter: blur(15px);
 }
 
 @media (max-width: 991px) {
@@ -569,6 +569,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 991px) {
     .about-us__bg {
+        padding-bottom: 70px;
         background: url("../img/about-us.png") no-repeat right/contain;
     }
 }
@@ -613,8 +614,8 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 991px) {
     .about-us__info {
-        width: 700px;
-        margin-right: 630px;
+        width: 710px;
+        margin-right: 620px;
     }
 }
 
@@ -635,12 +636,13 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 991px) {
     .product {
+        padding: 10px 0 100px 0;
         background: url("../img/product.png") no-repeat left/contain;
     }
 }
 
 body .text-big {
-    font-size: 10rem;
+    font-size: 12rem;
 }
 
 @media (max-width: 1300px) {
@@ -681,7 +683,7 @@ body .text-big {
 }
 
 .product__item:first-child {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 @media (max-width: 991px) {
@@ -714,7 +716,7 @@ body .text-big {
 }
 
 .product__name {
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
     font-size: 2.5rem;
 }
 
@@ -766,6 +768,10 @@ section {
 
 /* Tabs */
 
+.tabs {
+    margin-top: 30px;
+}
+
 .tabs__list {
     display: flex;
     margin: 0;
@@ -775,10 +781,10 @@ section {
 
 .tabs__link {
     display: inline-block;
-    padding: 25px;
+    padding: 25px 40px;
     text-decoration: none;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 @media (max-width: 568px) {
@@ -870,14 +876,14 @@ section {
 .work__preview {
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 155px;
 }
 
 .work__element {
     display: flex;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-bottom: 120px;
 }
 
 @media (max-width: 991px) {
@@ -889,7 +895,7 @@ section {
 
 .work__element-paragraph {
     margin: 0;
-    font-size: 3.5rem;
+    font-size: 3.7rem;
     font-weight: bold;
 }
 
@@ -935,7 +941,7 @@ section {
 
 @media (min-width: 991px) {
     .work__img {
-        margin-right: 30px;
+        margin-right: 50px;
     }
 }
 
@@ -950,7 +956,7 @@ section {
 }
 
 .work__content-img {
-    height: 100px;
+    height: 150px;
 }
 
 .work__paragraph:first-child {
@@ -1065,7 +1071,7 @@ section {
 /* Advantages */
 
 .advantages {
-    margin-top: 150px;
+    margin-top: 80px;
 }
 
 @media (max-width: 991px) {
@@ -1156,6 +1162,7 @@ section {
 /* Reg */
 
 .reg {
+    padding: 0 0 50px 0;
     background-color: #f4f4f4;
 }
 
@@ -1239,7 +1246,7 @@ section {
 }
 
 .reg__paragraph {
-    margin: 0 0 200px 0;
+    margin: 0 0 280px 0;
     text-align: center;
     font-size: 3.5rem;
 }
@@ -1505,6 +1512,8 @@ section {
 
 .block {
     width: 100%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
 .modal__form {
