@@ -50,7 +50,6 @@ const addActiveClass = () => {
 
 		if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
 			navLink.classList.add("nav__link--active");
-			// window.location.href = navLink.hash;
 		} else {
 			navLink.classList.remove("nav__link--active");
 		}
@@ -99,6 +98,8 @@ const requestBtnClose = document.querySelector(".modal__btn--close");
 const btnOpenRequestAll = document.querySelectorAll(".btn--open-modal");
 const logo = document.querySelector(".logo");
 const nav = document.querySelector(".nav");
+const bg = document.querySelector(".bg");
+
 
 btnOpenRequestAll.forEach((btnOpenRequest) => {
 	btnOpenRequest.addEventListener("click", () => {
@@ -106,6 +107,7 @@ btnOpenRequestAll.forEach((btnOpenRequest) => {
 		logo.classList.add("logo--white");
 		nav.classList.add("nav--hide");
 		header.classList.add("header-bg");
+		bg.classList.add("bg--active");
 
 		setTimeout(() => {
 			btnOpenRequest.classList.remove("btn--active");
@@ -125,6 +127,8 @@ requestBtnClose.addEventListener("click", () => {
 	logo.classList.remove("logo--white");
 	nav.classList.remove("nav--hide");
 	header.classList.remove("header-bg");
+	bg.classList.remove("bg--active");
+
 	document.body.classList.remove("scroll--hidden");
 });
 
@@ -133,6 +137,8 @@ request.addEventListener("mouseup", (e) => {
 		request.classList.remove("modal--open");
 		logo.classList.remove("logo--white");
 		nav.classList.remove("nav--hide");
+		header.classList.remove("header-bg");
+		bg.classList.remove("bg--active");
 		document.body.classList.remove("scroll--hidden");
 	}
 });
