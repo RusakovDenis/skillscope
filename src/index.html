@@ -127,20 +127,26 @@
 						<li class="nav__list-item">
 							<a class="nav__link" href="#how">Как это работает</a>
 						</li>
+						<li class="nav__list-item" style="display:none;">
+							<a class="nav__link" href="#contractor">Клиенты</a>
+						</li>
+						<li class="nav__list-item" style="display:none;">
+							<a class="nav__link" href="#registration">Регистрация</a>
+						</li>
 					</ul>
 				</nav>
 				<button class="btn-reg btn--open-modal" type="button">Регистрация</button>
 			</div>
 		</div>
 	</header>
-	<section class="banner">
+	<div class="banner">
 		<div class="wrap">
 			<div class="banner__content">
 				<h1 class="banner__title">Тысячи<br>компаний-партнёров<br>для вашего бизнеса<br><span class="color-green">В один
 						клик</span></h1>
 			</div>
 		</div>
-	</section>
+	</div>
 	<section class="about-us" id="about-us">
 		<div class="about-us__bg">
 			<div class="wrap">
@@ -167,7 +173,7 @@
 			<img class="block" src="img/block-2.jpg" alt="">
 		</div>
 	</section>
-	<section class="product">
+	<div class="product">
 		<div class="wrap">
 			<h2 class="subtitle subtitle--right"><span class="text-big">Удобный</span><br>и универсальный продукт</h2>
 			<div class="product__content">
@@ -190,7 +196,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<section class="work" id="how">
 		<div class="wrap">
 			<div class="work__header">
@@ -198,11 +204,11 @@
 				<div class="tabs">
 					<ul class="tabs__list" role="tablist">
 						<li class="tabs__item" role="presentation">
-							<a class="tabs__link tabs__link--green tabs__link--active tabs__work" href="#tab1" role="tab"
+							<a class="tabs__link tabs__link--green tabs__link--active tabs__work" href="#contractor" role="tab"
 								aria-selected="true">Для поиска<br>контрагентов</a>
 						</li>
 						<li class="tabs__item" role="presentation">
-							<a class="tabs__link tabs__link--blue tabs__clients" href="#tab2" role="tab" tabindex="-1">Для
+							<a class="tabs__link tabs__link--blue tabs__clients" href="#client" role="tab" tabindex="-1">Для
 								поиска<br>
 								клиентов</a>
 						</li>
@@ -210,7 +216,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="work tabs__section" id="tab1" data-id="contractor" aria-labelledby="tab1" tabindex="-1" role="tabpanel">
+		<div class="work tabs__section" id="contractor" aria-labelledby="tab1" tabindex="-1" role="tabpanel">
 			<div class="work__bg">
 				<div class="wrap">
 					<div class="work__preview">
@@ -280,8 +286,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="clients tabs__section" id="tab2" data-id="client" aria-labelledby="tab2" tabindex="-1" role="tabpanel"
-			hidden>
+		<div class="clients tabs__section" id="client" aria-labelledby="tab2" tabindex="-1" role="tabpanel" hidden>
 			<div class="wrap">
 				<div class="clients__preview">
 					<div class="clients__line">

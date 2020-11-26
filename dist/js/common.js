@@ -33,7 +33,7 @@ if (window.matchMedia("(max-width: 991px)").matches) {
 		if (e.target !== toggleMenu) {
 			toggleMenu.classList.remove("toggle-menu--active");
 			toggleMenu.setAttribute("aria-expanded", false);
-			dropdownMenu.classList.remove("dropdown-menu--show");
+			dropdownMenu.classList.remove("toggle-menu--show");
 			dropdownMenu.style.height = "0";
 		}
 	});
@@ -50,6 +50,7 @@ const addActiveClass = () => {
 
 		if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
 			navLink.classList.add("nav__link--active");
+			location.hash = navLink.hash;
 		} else {
 			navLink.classList.remove("nav__link--active");
 		}
@@ -89,6 +90,19 @@ window.onscroll = () => {
 	headerFixed();
 	btnTopShow();
 	addActiveClass();
+
+
+	let fromTop = window.scrollY + 80;
+
+	navLinks.forEach(navLink => {
+		let section = document.querySelector(navLink.hash);
+
+		if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+			navLink.classList.add("nav__link--active");
+		} else {
+			navLink.classList.remove("nav__link--active");
+		}
+	});
 }
 
 // Request
@@ -153,7 +167,7 @@ request.addEventListener("keydown", (e) => {
 const tabs = document.querySelector(".tabs");
 const tabsList = document.querySelector(".tabs__list");
 const tabsLink = tabsList.querySelectorAll("a");
-const tabsContents = document.querySelectorAll("[id^='tab']");
+const tabsContents = document.querySelectorAll(".tabs__section");
 
 const switchTab = (prevTab, nextTab) => {
 	prevTab.classList.toggle("tabs__link--active");
@@ -175,6 +189,8 @@ const switchTab = (prevTab, nextTab) => {
 Array.prototype.forEach.call(tabsLink, (tabLink, i) => {
 	tabLink.addEventListener("click", (e) => {
 		e.preventDefault();
+
+		location.hash = e.target.hash;
 
 		let currentTab = tabsList.querySelector("[aria-selected]");
 
