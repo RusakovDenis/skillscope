@@ -11,7 +11,7 @@
 	<meta name="theme-color" content="#FFFFFF">
 	<title>Главная</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
-	<!-- <style>
+	<style>
 		.preloader {
 			position: fixed;
 			top: 0;
@@ -31,12 +31,14 @@
 			opacity: 1;
 		}
 
-		.preloader__img {
+		.name {
 			position: absolute;
-			top: calc(50% - 50px);
-			left: calc(50% - 50px);
-			-webkit-transition: 3s;
+			top: calc(50% - 70px);
+			left: calc(50% - 70px);
 			transition: 3s;
+			border: 3px solid var(--colorMain);
+			padding: 45px 10px;
+			border-radius: 50%;
 		}
 
 		@-webkit-keyframes preloaderPulse {
@@ -73,18 +75,28 @@
 			}
 		}
 
-		.preloader__img {
+		.name {
+			color: var(--colorMain);
+			font-size: 1.2rem;
 			-webkit-animation: preloaderPulse 1.2s linear infinite;
 			animation: preloaderPulse 1.2s linear infinite;
+			/* text-align: center; */
+			font-weight: bold;
 		}
-	</style> -->
+
+		.name p {
+			margin: 0;
+		}
+	</style>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-	<!-- <div class="preloader preloader--show">
-		<img class="preloader__img" src="img/logo.png" alt="">
-	</div> -->
+<body style="overflow-y: hidden;">
+	<div class="preloader preloader--show">
+		<div class="name">
+			<p>SkillScope</p>
+		</div>
+	</div>
 	<header class="header">
 		<div class="header__wrap">
 			<div class="header__main">
@@ -117,7 +129,7 @@
 						</li>
 					</ul>
 				</nav>
-				<button class="btn-reg btn--open-request" type="button">Регистрация</button>
+				<button class="btn-reg btn--open-modal" type="button">Регистрация</button>
 			</div>
 		</div>
 	</header>
@@ -270,12 +282,12 @@
 				</div>
 				<div class="clients__content">
 					<div class="clients__item">
-						<img class="clients__img" src="" alt="">
+						<img class="clients__img" src="img/clients/item-1.png" alt="">
 						<p class="clients__paragraph">Все контрагенты проверены на платежеспособность: фирмы-однодневки, компании
 							в процедуре банкротства и неплатежеспособные компании будут помечены.</p>
 					</div>
 					<div class="clients__item">
-						<img class="clients__img" src="" alt="">
+						<img class="clients__img" src="img/clients/item-2.png" alt="">
 						<p class="clients__paragraph">Отзывы о клиентах от поставщиков товаров и услуг на основании уже
 							заключенных сделок.</p>
 					</div>
@@ -342,23 +354,26 @@
 	</section>
 	<div class="modal">
 		<div class="modal__content">
-			<button class="modal__btn--close btn--close" aria-label="Закрыть модальное окно"><span
-					class="cross"></span></button>
-			<form class="modal__form" method="post" action="">
-				<input class="modal__input" type="text" placeholder="Имя">
-				<select class="modal__select">
-					<option class="modal__option">Выбор</option>
-					<option class="modal__option"></option>
-				</select>
-				<input class="modal__input" type="text" placeholder="Поиск">
-				<input class="modal__input" type="text" placeholder="Должность">
-				<input class="modal__input" type="text" placeholder="ИНН">
-				<input class="modal__input" type="text" placeholder="Наименование организации">
-				<p class="modal__message">Нажимая на кнопку «Регистрация» Вы<br>соглашаетесь с <a class="reg__link" href=""
-						target="_blank">политикой
-						конфиденциальности</a></p>
-				<button class="modal__btn" type="submit">Регистрация</button>
-			</form>
+			<div class="modal__wrap">
+				<img class="modal__img" src="img/reg.png" alt="">
+				<button class="modal__btn--close btn--close" aria-label="Закрыть модальное окно"><span
+						class="cross"></span></button>
+				<form class="modal__form" method="post" action="">
+					<input class="modal__input" type="text" placeholder="Имя">
+					<select class="modal__select">
+						<option class="modal__option">Выбор</option>
+						<option class="modal__option"></option>
+					</select>
+					<input class="modal__input" type="text" placeholder="Поиск">
+					<input class="modal__input" type="text" placeholder="Должность">
+					<input class="modal__input" type="text" placeholder="ИНН">
+					<input class="modal__input" type="text" placeholder="Наименование организации">
+					<p class="modal__message">Нажимая на кнопку «Регистрация» Вы<br>соглашаетесь с <a class="reg__link" href=""
+							target="_blank">политикой
+							конфиденциальности</a></p>
+					<button class="modal__btn" type="submit">Регистрация</button>
+				</form>
+			</div>
 		</div>
 	</div>
 	<button class="btn-top btn--hide" aria-label="Прокрутка в начало страницы">
@@ -368,7 +383,7 @@
 		</svg>
 	</button>
 	<!-- Preloader -->
-	<!-- <script>
+	<script>
 		const preloader = document.querySelector(".preloader");
 
 		window.onload = () => {
@@ -380,7 +395,7 @@
 				preloader.style.display = "none";
 			}, 2000);
 		}
-	</script> -->
+	</script>
 	<script src="js/common.js"></script>
 	<script src="js/focus-visible.js"></script>
 </body>

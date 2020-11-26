@@ -96,10 +96,15 @@ const request = document.querySelector(".modal");
 const requestBtnClose = document.querySelector(".modal__btn--close");
 
 const btnOpenRequestAll = document.querySelectorAll(".btn--open-modal");
+const logo = document.querySelector(".logo");
+const nav = document.querySelector(".nav");
 
 btnOpenRequestAll.forEach((btnOpenRequest) => {
 	btnOpenRequest.addEventListener("click", () => {
 		btnOpenRequest.classList.add("btn--active");
+		logo.classList.add("logo--white");
+		nav.classList.add("nav--hide");
+		header.classList.add("header-bg");
 
 		setTimeout(() => {
 			btnOpenRequest.classList.remove("btn--active");
@@ -115,13 +120,18 @@ btnOpenRequestAll.forEach((btnOpenRequest) => {
 });
 
 requestBtnClose.addEventListener("click", () => {
-	request.classList.remove("request--open");
+	request.classList.remove("modal--open");
+	logo.classList.remove("logo--white");
+	nav.classList.remove("nav--hide");
+	header.classList.remove("header-bg");
 	document.body.classList.remove("scroll--hidden");
 });
 
 request.addEventListener("mouseup", (e) => {
 	if (e.target == request) {
-		request.classList.remove("request--open");
+		request.classList.remove("modal--open");
+		logo.classList.remove("logo--white");
+		nav.classList.remove("nav--hide");
 		document.body.classList.remove("scroll--hidden");
 	}
 });
