@@ -50,6 +50,7 @@ const addActiveClass = () => {
 
 		if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
 			navLink.classList.add("nav__link--active");
+			// window.location.href = navLink.hash;
 		} else {
 			navLink.classList.remove("nav__link--active");
 		}
@@ -188,7 +189,7 @@ Array.prototype.forEach.call(tabsLink, (tabLink, i) => {
 	});
 });
 
-document.querySelectorAll("a[href^='#']").forEach(link => {
+document.querySelectorAll(".nav__link").forEach(link => {
 	link.addEventListener("click", function (e) {
 		e.preventDefault();
 
